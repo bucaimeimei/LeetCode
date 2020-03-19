@@ -13,7 +13,7 @@
 
 
 class Solution(object):
-    def singleNumber(self, nums):
+    def singleNumber_1(self, nums):
         """
         :type nums: List[int]
         :rtype: int
@@ -26,3 +26,13 @@ class Solution(object):
             else:
                 apaxes_list.remove(i)
         return apaxes_list.pop()
+
+if __name__ == "__main__":
+    solution = Solution()
+    print("--------利用列表方法--------")
+    arr1 = [2,2,1]
+    res = solution.singleNumber_1(arr1)
+    print(res)
+    arr2 = [4,1,2,1,2]
+    res = solution.singleNumber_1(arr2)
+    print(res)
