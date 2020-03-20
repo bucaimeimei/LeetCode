@@ -18,6 +18,7 @@
 '''
 
 class Solution(object):
+    #方法1
     def searchMatrix_1(self, matrix, target):
         """
         :type matrix: List[List[int]]
