@@ -34,14 +34,11 @@ class Solution(object):
                 if i == target:
                     tf_dict['true'] += 1
         if tf_dict['true']>1:
-            return tf_dict['true'] != 1
-            del tf_dict 
+            return True
         if tf_dict['true'] ==1:
-            return tf_dict['true'] == 1
-            del tf_dict 
+            return True
         if tf_dict['true'] ==0:  
-            return tf_dict['true'] != 0
-            del tf_dict 
+            return False
 if __name__ == "__main__":
   solution = Solution()
   print("--------利用字典方法--------")
