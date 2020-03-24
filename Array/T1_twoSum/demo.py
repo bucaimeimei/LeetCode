@@ -10,7 +10,7 @@
 
 class Solution(object):
     #方法1
-    def twoSum(self, nums, target):
+    def twoSum1(self, nums, target):
         """
         :type nums: List[int]
         :type target: int
@@ -33,7 +33,7 @@ class Solution(object):
             return []
             
     #方法2        
-    def twoSum(self, nums, target):
+    def twoSum2(self, nums, target):
         """
         :type nums: List[int]
         :type target: int
@@ -45,3 +45,10 @@ class Solution(object):
                 if nums[i]+nums[j] == target:
                     r.append(i)
         return r
+      
+if __name__ == "__main__":
+    solution = Solution()
+    target = 9
+    arr1 = [2, 7, 11, 15]
+    res = solution.twoSum1(arr1，target)
+    print(res)
