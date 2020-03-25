@@ -15,12 +15,14 @@ class Solution(object):
         :type nums: List[int]
         :rtype: None Do not return anything, modify nums in-place instead.
         """
-        zero_list = []
         for i in nums:
             if i == 0:
-                zero_list.append(i)
                 nums.remove(i)
+                nums.append(i)
             else:
                 pass
-        nums.extend(zero_list)
+
+
+
+
 
