@@ -16,11 +16,11 @@ class Solution(object):
         :rtype: None Do not return anything, modify nums in-place instead.
         """
         zero_list = []
-        no_zero_list = []
         for i in nums:
             if i == 0:
                 zero_list.append(i)
+                nums.remove(i)
             else:
-                no_zero_list.append(i)
-        new_list = no_zero_list.extend(zero_list)
-        return new_list
+                pass
+        nums.extend(zero_list)
+
