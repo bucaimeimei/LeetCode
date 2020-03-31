@@ -24,7 +24,7 @@ true
 
 链表中有一个环，其尾部连接到第二个节点。
 
-![](D:/bmqer/99-学习资料/05-刷题/linklist/1.png)
+![text ](D:/bmqer/99-学习资料/05-刷题/linklist/1.png)
 
 示例 2：
 
