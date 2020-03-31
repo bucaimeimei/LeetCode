@@ -18,3 +18,23 @@
   进阶：你能用 O(1)（即，常量）内存解决此问题吗？
 '''
 
+
+class Solution(object):
+    def hasCycle(self, head):
+        """
+        :type head: ListNode
+        :rtype: bool
+        """
+        if(head == None or head.next == None):
+            return False
+        node1 = head
+        node2 = head.next
+        while(node1 != node2):
+            if(node2 == None or node2.next == None):
+                return False
+            node1 = node1.next
+            node2 = node2.next.next
+            
+        return True
+
+
