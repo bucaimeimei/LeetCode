@@ -22,7 +22,6 @@ python实现：
 
 from collections import deque
 
-
 L = deque([50, 16, 30, 10, 60,  90,  2, 80, 70])
 
 def heap_sort(L):
