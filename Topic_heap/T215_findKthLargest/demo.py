@@ -18,7 +18,7 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
-        
+        return heapq.nlargest(k, nums)[-1]
         
         
         
