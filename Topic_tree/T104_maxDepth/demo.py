@@ -21,12 +21,31 @@ class Solution(object):
         :rtype: int
         """
         
+        '''
+    
+        方法一：非递归实现的BFS
+        '''
+        if root is None:
+            return 0
         
+        # initialize the queue and lenth
+        queue = collections.deque()
+        queue.append(root)
+        lenth = 0
         
+        # loop over the queue 
+        while queue:
+            lenth += 1
+            for i in range(len(queue)):
+                # print("lenth:{}, i:{}".format(lenth, i))
+                node = queue.popleft()
+                if node.left is not None:
+                    queue.append(node.left)
+                if node.right is not None:
+                    queue.append(node.right)
         
-        
-        
-        
+        return lenth
+
         
         
       
