@@ -1,2 +1,2 @@
 # LeetCode
-leetcode topic
+leetcode topic study
