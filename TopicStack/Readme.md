@@ -1,38 +1,56 @@
 #### 栈：FILO
 后存储，先出来的一种数据结构
+
 栈顶标记
+
 操作：
+
 入栈
+
 出栈
+
 获取栈顶元素
+
 判断栈是否为NULL
 
 ------------------
 数组栈
+
 链式栈
 
 ------------------
 
 
 #### 面试题 03.02. 栈的最小值
+
 请设计一个栈，除了常规栈支持的pop与push函数以外，还支持min函数，该函数返回栈元素中的最小值。
+
 执行push、pop和min操作的时间复杂度必须为O(1)。
 
 
 示例：
 
 MinStack minStack = new MinStack();
+
 minStack.push(-2);
+
 minStack.push(0);
+
 minStack.push(-3);
+
 minStack.getMin();   --> 返回 -3.
+
 minStack.pop();
+
 minStack.top();      --> 返回 0.
+
 minStack.getMin();   --> 返回 -2.
 
 
 #### 解题思路
 1.双栈法
+----------
+
 ![image](https://user-images.githubusercontent.com/42366181/117565518-4a44ff80-b0e4-11eb-8492-f6621b38d645.png)
 ![image](https://user-images.githubusercontent.com/42366181/117565534-5761ee80-b0e4-11eb-8692-d9d918a3f7be.png)
 ![image](https://user-images.githubusercontent.com/42366181/117565562-7a8c9e00-b0e4-11eb-9463-9133de2db8bd.png)
@@ -65,7 +83,11 @@ class MinStack:
         
 
 2.单栈法
+----------
+
 self.min 来维持最小值。
+
 push：每次x值比现有的最小值<=，那么把最小值和当前值依次push进入stack中。
+
 pop：每次pop出的值和现有的最小值==， 那么需要再pop一次，把这个新pop的值赋值给最小值。
 
