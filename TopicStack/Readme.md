@@ -1,5 +1,6 @@
 
 https://pic.leetcode-cn.com/1617197321-MBzdwF-7.jpg
+![image](https://user-images.githubusercontent.com/42366181/117563277-51194580-b0d7-11eb-8f37-5c630a9cb01c.png)
 
 class MinStack:
     def __init__(self):
