@@ -66,7 +66,33 @@
 2.单栈法
 ----------
 
-    (1) self.min 来维持最小值。
-    (2) push：每次x值比现有的最小值<=，那么把最小值和当前值依次push进入stack中。
-    (3) pop：每次pop出的值和现有的最小值==， 那么需要再pop一次，把这个新pop的值赋值给最小值。
+![image](https://user-images.githubusercontent.com/42366181/117566158-9ba2be00-b0e7-11eb-8b1d-733d97d6f61d.png)
+![image](https://user-images.githubusercontent.com/42366181/117566168-a9584380-b0e7-11eb-8d1f-58821cb74d7d.png)
+![image](https://user-images.githubusercontent.com/42366181/117566177-b37a4200-b0e7-11eb-920b-497e64afe175.png)
+![image](https://user-images.githubusercontent.com/42366181/117566193-cf7de380-b0e7-11eb-9f2a-ba1f6a22175f.png)
 
+    class MinStack:
+
+    def __init__(self):
+        self.stack=[]
+
+    def push(self, x: int) -> None:
+        min_num = self.stack[-1][1]   if self.stack else  None
+        if min_num is None:
+            self.stack.append((x,x))
+        elif x<=min_num:
+            self.stack.append((x,x))
+        elif x>min_num:
+            self.stack.append((x,min_num))
+
+
+    def pop(self) -> None:
+        self.stack.pop()
+
+
+    def top(self) -> int:
+        return self.stack[-1][0]
+
+
+    def getMin(self) -> int:
+         return self.stack[-1][1]
